@@ -32,15 +32,23 @@ export class CalculComponent {
 export class Convertisseur {
 
   static ajouterResultat(c: Calc): string|undefined {
-    let finalResult;
-    let finalResulttemp;
-    let fUnity ;let sUnity;
-    sUnity = unityTranslate(c.startUnity);
-    fUnity = unityTranslate(c.endUnity); 
-    finalResulttemp = c.nombre * sUnity;
-    finalResulttemp = finalResulttemp / fUnity ;
-    finalResult = `${c.nombre}${c.startUnity} = ${finalResulttemp}${c.endUnity} `;
-    
+    let frtemp;
+    let sUnity = unityTranslate(c.startUnity);
+    let fUnity = unityTranslate(c.endUnity); 
+    let finalResulttemp = (c.nombre * sUnity) / fUnity;
+    console.log(finalResulttemp);
+    const epsilon = 1e-10;
+    if (finalResulttemp > epsilon){
+      frtemp = finalResulttemp.toLocaleString("fr", {   
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 3,
+      });
+    }
+    if (finalResulttemp <= epsilon){
+      frtemp =finalResulttemp;
+    }
+    let finalResult = `${c.nombre}${c.startUnity} = ${frtemp}${c.endUnity} `;
+  
   return finalResult;
    }
 }
