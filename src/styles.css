@@ -1,1 +1,68 @@
-/* You can add global styles to this file, and also import other style files */
+:root{
+    --color-value : #BDADEB;
+    --color-depart : #E1C6DD;
+    --color-depart-unity : #E898DC;
+    --color-arrival : #ADE7EB;
+    --color-arrival-unity : #6ACAD0;
+    --color-convert : #BDFACE;
+    --color-text-depart : #D441BE;
+    --color-text-arrival : #0098A3;
+    --color-text : #6ABFC5;
+}
+
+body{
+    padding-top: 40px;
+}
+
+input, #start, #arrival{
+    width: 130px;
+    height: 50px;
+    border-radius: 5px;
+    border: 0;
+    text-align: center;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+#separation{
+    width: 100px;
+}
+
+#form{
+    display: flex;
+    justify-content: center;
+}
+
+#result{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#value{
+    background-color: var(--color-value);
+}
+
+#start{
+    background-color: var(--color-depart-unity);
+}
+
+#arrival{
+    background-color: var(--color-arrival-unity);
+}
+
+#submit{
+    margin-top: 4%;
+    background-color: var(--color-convert);
+}
+
+p{
+    margin-top: 4%;
+    color: var(--color-text-depart);
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    padding: 2%;
+    border-radius: 5px;
+    background-color: var(--color-arrival);
+}

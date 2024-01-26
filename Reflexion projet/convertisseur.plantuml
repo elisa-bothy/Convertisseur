@@ -1,0 +1,12 @@
+@startuml Diagramme de classes
+' Projet Convertisseur (1 opération)
+' Maquette sur https://www.figma.com/file/W59yeBCWw3SMPCaycI7DWg/Untitled?type=design&node-id=0-1&mode=design&t=XnJlofEun4ugpjRP-0
+' Diagramme sur https://www.figma.com/file/idlz1QjsNQILkAL5mMY5Yt/diagramme-convertisseur?type=design&node-id=0-1&mode=design&t=FhYDt5vljlRlaIeL-0
+
+(convertir une valeur) as convertir
+actor utilisateur
+
+utilisateur -- convertir
+
+
+@enduml

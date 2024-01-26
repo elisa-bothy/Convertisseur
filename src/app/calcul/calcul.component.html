@@ -1,0 +1,33 @@
+<form #f="ngForm" (submit)="onSubmitConvertUnity(f)">
+    <div id="form">
+        <input type="text" placeholder="Valeur" name="value" id="value" ngModel>
+        <div id="separation"></div>
+        <select name="depart" id="start" ngModel>
+            <option value="" disabled>Unité de départ</option>
+            <option value="km">Kilomètre</option>
+            <option value="m">Mètre</option>
+            <option value="dm">Décimètre</option>
+            <option value="cm">Centimètre</option>
+            <option value="mm">Millimètre</option>
+            <option value="um">Micromètre</option>
+            <option value="nm">Nanomètre</option>
+        </select>
+        <div id="separation"></div>
+        <select name="arrival" id="arrival" ngModel>
+            <option value="" disabled>Unité d'arrivée</option>
+            <option value="km">Kilomètre</option>
+            <option value="dcm">Décamètre</option>
+            <option value="m">Mètre</option>
+            <option value="dm">Décimètre</option>
+            <option value="cm">Centimètre</option>
+            <option value="mm">Millimètre</option>
+            <option value="um">Micromètre</option>
+            <option value="nm">Nanomètre</option>
+        </select>
+    </div>
+    <div id="result">
+        <input type="submit" value="Convert" id="submit" (click)="onClick()">
+        <p *ngIf="Afficher === true">{{finalResult}}</p> 
+    </div>
+</form>
+
