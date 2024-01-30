@@ -1,0 +1,29 @@
+@media all and (min-width: 200px) {
+   h1{
+        font-family: sans-serif;
+        letter-spacing: 1px;
+        text-align: center;
+        color: var(--color-text-depart);
+   }
+   h2{
+        font-family: sans-serif;
+        letter-spacing: 1px;
+        text-align: center;
+        color: var(--color-text-arrival);
+   } 
+}
+
+@media all and (min-width: 800px) {
+    h1{
+        font-family: sans-serif;
+        letter-spacing: 2px;
+        text-align: center;
+        color: var(--color-text-depart);
+    }
+    h2{
+        font-family: sans-serif;
+        letter-spacing: 2px;
+        text-align: center;
+        color: var(--color-text-arrival);
+    }
+}

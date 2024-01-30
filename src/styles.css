@@ -1,22 +1,28 @@
 :root{
-    --color-value : #BDADEB;
-    --color-depart : #E1C6DD;
+    --color-value : #a892eb;
+    --color-value-hover : #6f5aaf;
+    --color-depart : #df60cc;
+    --color-depart-hover : #b348a3;
     --color-depart-unity : #E898DC;
     --color-arrival : #ADE7EB;
+    --color-arrival-hover : #3b898f;
     --color-arrival-unity : #6ACAD0;
-    --color-convert : #BDFACE;
+    --color-convert : #67f38f;
+    --color-convert-hover : #3bb45e;
     --color-text-depart : #D441BE;
     --color-text-arrival : #0098A3;
     --color-text : #6ABFC5;
+    --color-background :#e8f0f8;
 }
 
 body{
-    padding-top: 40px;
+    padding-top: 4%;
+    background-color: var(--color-background);
 }
 
 input, #start, #arrival{
-    width: 130px;
-    height: 50px;
+    width: 200px;
+    height: 80px;
     border-radius: 5px;
     border: 0;
     text-align: center;
@@ -44,17 +50,41 @@ input, #start, #arrival{
     background-color: var(--color-value);
 }
 
+#value:hover{
+    background-color: var(--color-value-hover);
+    color: whitesmoke;
+}
+
+#value:focus{
+    outline: 2px solid var(--color-text-depart);
+}
+
 #start{
     background-color: var(--color-depart-unity);
+}
+
+#start:hover{
+    background-color: var(--color-depart-hover);
+    color: whitesmoke;
 }
 
 #arrival{
     background-color: var(--color-arrival-unity);
 }
 
+#arrival:hover{
+    background-color: var(--color-arrival-hover);
+    color: whitesmoke;
+}
+
 #submit{
     margin-top: 4%;
     background-color: var(--color-convert);
+}
+
+#submit:hover{
+    background-color: var(--color-convert-hover) ;
+    color: whitesmoke;
 }
 
 p{
@@ -65,4 +95,7 @@ p{
     padding: 2%;
     border-radius: 5px;
     background-color: var(--color-arrival);
+    min-height: 35px;
+    min-width: 165px;
+    text-align: center;
 }
